@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Fifehanmi 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#7a1241;--pink:#ff4f93;--glass:rgba(255,255,255,.32);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family:'Quicksand',system-ui,sans-serif;color:var(--ink);background:linear-gradient(135deg,#ffd6e7,#ff9cc4 50%,#ffc2da);background-attachment:fixed;overflow:hidden}
+#confetti{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.heart{position:fixed;bottom:-60px;z-index:1;pointer-events:none;animation:rise linear infinite;opacity:.0;filter:drop-shadow(0 4px 8px rgba(255,79,147,.35))}
+@keyframes rise{0%{transform:translateY(0) translateX(0) rotate(-10deg);opacity:0}10%{opacity:.85}50%{transform:translateY(-55vh) translateX(25px) rotate(10deg)}100%{transform:translateY(-115vh) translateX(-20px) rotate(-10deg);opacity:0}}
+main{position:relative;z-index:2;height:100%;display:flex;align-items:center;justify-content:center;padding:16px}
+.glass{background:var(--glass);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border:1.5px solid rgba(255,255,255,.65);border-radius:28px;box-shadow:0 12px 40px rgba(255,79,147,.35),inset 0 1px 0 rgba(255,255,255,.8)}
+#intro{text-align:center;padding:40px 24px;max-width:760px;width:100%}
+h1{font-family:'Titan One',Impact,'Arial Black',sans-serif;font-weight:400;margin:0;line-height:1.05;text-transform:uppercase;color:#fff;font-size:clamp(2.4rem,10vw,5.5rem);text-shadow:0 4px 0 #ff4f93,0 8px 0 #d6286f,0 14px 24px rgba(122,18,65,.4);letter-spacing:1px}
+h1 span{display:block;color:#fff6fa;font-size:1.15em}
+.sub{margin:30px 0 26px;font-weight:700;font-size:1.1rem}
+.btn{font:700 1rem 'Quicksand',sans-serif;border:0;cursor:pointer;color:#fff;background:linear-gradient(135deg,#ff6aa5,#e8317a);padding:13px 28px;border-radius:999px;box-shadow:0 6px 18px rgba(232,49,122,.5);transition:transform .2s,opacity .2s}
+.btn:hover{transform:translateY(-2px) scale(1.04)}
+.btn:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.btn.ghost{background:rgba(255,255,255,.55);color:var(--ink);box-shadow:none;border:1.5px solid rgba(255,255,255,.8)}
+#wishes{display:none;width:100%;max-width:720px;max-height:calc(100% - 8px);flex-direction:column;padding:22px 20px}
+#wishes.on{display:flex}
+.count{text-align:center;font-family:'Titan One',sans-serif;color:#fff;text-shadow:0 2px 0 #e8317a;font-size:1.1rem;margin-bottom:10px}
+#body{overflow-y:auto;padding:4px 8px;flex:1;animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+#body p{margin:0 0 .9em;line-height:1.65;font-size:1.02rem;font-weight:500}
+.from{font-family:'Titan One',sans-serif;font-size:1.3rem;color:#d6286f;margin-top:6px;white-space:pre-line}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}
+.dots{display:flex;gap:7px}
+.dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.7);transition:.3s}
+.dots i.on{background:var(--pink);transform:scale(1.35)}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+<main>
+  <section id="intro" class="glass">
+    <h1>Happy<br>Birthday<span>Fifehanmi</span></h1>
+    <p class="sub">🎀 Your people have a few words for you 🎀</p>
+    <button class="btn" id="open">Read your wishes 💌</button>
+  </section>
+  <section id="wishes" class="glass">
+    <div class="count" id="count"></div>
+    <div id="body"></div>
+    <div class="nav">
+      <button class="btn ghost" id="prev">← Back</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn" id="next">Next →</button>
+    </div>
+  </section>
+</main>
+<script>
+const W=[
+{p:["Happy 20th birthday to my girl, my best friend, my sister, my safe place, and one of the biggest blessings God has given me. ❤️🥹❤️","Sometimes I genuinely sit down and think about how lucky I am to have you in my life, and honestly, words can never fully explain how much you mean to me. Five years plus of friendship, and you’ve become so much more than just a best friend to me. You’re literally the elder sister I never had, the person I can count on, my personal defender, my adviser, my gist partner, and one of the very few people I know will always have my back no matter what.","I don’t even know where to start because there’s just so much I want to say about you. First of all, thank you for being YOU. Thank you for always showing up for me, even when it’s not convenient for you. Thank you for making yourself available for me in ways I know not everybody would. You have sacrificed your time, energy, and comfort for me more times than I can count, and I hope you know that I don’t take any of it for granted. Sometimes, I wonder what I did to deserve someone who loves me this much, because having you in my life is genuinely something I’ll forever be grateful for.","One thing about you is that you will always stand up for me. 😭❤️ Whether I’m right or wrong, you’ll defend me first, then come and scold me privately if I’ve done nonsense. 😂😂 You can be so strict with me sometimes, and honestly, there are times I probably feel like you’re doing too much, but deep down, I know it’s because you genuinely care about me and want the best for me. You don’t just tell me what I want to hear; you tell me what I NEED to hear, even when it’s not what I want to hear. And that’s one of the things I love most about you. You’re not the type of person who will watch me make a bad decision and clap for me just because you want to please me. You’ll warn me, advise me, and try your best to make me see reason. And even when I decide to carry my own head and do whatever I want, only for it to come back and bite me, you never make me feel stupid for not listening to you.","I LOVE YOU SO MUCH OLUWAFIFEHANMI🥹❤️","HAPPY 20TH BIRTHDAY, MY LOIS! 🥹❤️🎂"],f:"~ simi your love 😍"},
+{p:["Dear Lois,","Honestly, I don’t even know how to put into words how much you mean to me. 🥹❤️ You have been there for me in ways I can never forget, and I want you to know that I will never take your friendship for granted. Thank you for standing by me, for listening to me, for supporting me, and for being someone I can always appreciate with my whole heart.","Having you in my life is truly a blessing, and if there’s one thing I’m grateful for, it’s having a friend like you. As you turn 20, I pray that God blesses you beyond your expectations, grants your heart’s desires, and gives you every beautiful thing you deserve. May this new chapter bring you happiness, peace, success, genuine love, and countless reasons to smile. ❤️","I pray that life is as kind to you as you have been to me. And just as you’ve always been there for me, I hope I can always be there for you too. I hope our friendship lasts for many more years, and that we get to create even more beautiful memories together.","Thank you for being you, Lois. Thank you for being my friend. I love and appreciate you more than words can explain. 🥹🫂❤️","Happy 20th birthday, my girl! Welcome to your new decade. May it be your most beautiful chapter yet. 🎀💕"],f:"~ dara 💗"},
+{p:["Bunkieeee mi atata,","Who knew we’d become friends and close enough to even choose room again in 200 level and even being bunk mates, it hasn’t being easy being your bunk mate but you just need someone who understand you and thank God i could understand you. Funny how i wasn’t planning on staying roomate with you in 200 level because i didn’t really like you in 100 level but im grateful i was your roomate and bunk mate again with all your aggressiveness and shouting you still made people like you and that’s what i like about you, like i said earlier people just need to understand you to see that you are a friendly girl. You stood up for me during the ini trouble and you were also caring whenever i got admitted in the clinic. So i just want to say keep being you and don’t let any one especially a man take your happiness from you. Dara and i are always like we wish lois was here, she would have laughed and stuff like that, keep smiling and laughing girl and thank you for everything Ojurereoluwa","Happy birthday once again, i love you and miss your trouble and shouting, enjoy your day darling"],f:"~ mercy 💗"},
+{p:["Oh my darling Lois 🥹💕","Happy happy 20th birthday to you, my babyyy! 🎉❤️","I honestly don’t even know where to start because how do you put into words how much someone means to you? I’m so grateful that life brought you into my world, and I hope you know just how special you are to me.","You’re more than just a friend to me. You’re someone I genuinely love and cherish, someone I’ll always root for and want the absolute best for.","Thank you for being such an amazing friend.<br>Thank you for always having my back.<br>Thank you for all the times you’ve shown up for me in your own way, even in the littlest things. I see them, I appreciate them, and I’ll never take them for granted.","I’ll forever be grateful to have you in my life, and I’m so happy I get to call you my friend.","I love your carefree attitude, your smile, your kindness, your heart, and the way you carry so much love within you. I love everything about you, my girl ❤️","I pray your light never dims. May life be kind to you, may happiness find you in places you least expect, and may you never have to question how loved and deserving you are. I pray this new chapter brings you beautiful experiences, answered prayers, genuine love, endless laughter, and everything your heart silently wishes for.","Never allow anyone to make you feel like you’re too much or that you need to water yourself down to be loved. Baby girl, you are amazing just the way you are and anyone who gets to experience the beautiful person you are is incredibly lucky.","I hope 20 treats you so gently. I hope you grow into everything you’ve ever dreamed and I hope you never lose that beautiful part of yourself that makes you, you.","I love you so much my darling Lois. Happy birthday once again my baby girl 🥹🎉❤️"],f:"~ mollayo 💗"},
+{p:["To my beautiful Lois, ❤️🎀","Happy 20th birthday to my girl! 🥹💕 Welcome to your twenties, babyyy! 🥳❤️ Lois, I just want you to know how grateful I am to have you as a friend. You have such a big heart, even though you can be so aggressive sometimes. 😭😂 Girl, why are you always ready to fight? But beneath all that feistiness is such a loving, caring, and beautiful soul. You are genuinely such a good friend, and I hope you know how special you are. You have such a beautiful way of showing love and care, and I’m so happy to have someone like you in my life. ❤️","As you step into this new chapter, I pray that God blesses you beyond your expectations, grants your heart’s desires, and surrounds you with genuine love and happiness. May your twenties bring you beautiful memories, amazing opportunities, success, peace, and everything your heart longs for. May you always be surrounded by people who appreciate you, celebrate you, and love you just as genuinely as you love them. And please, my fine light-skinned babe, keep shining and being your beautiful self! 😍❤️ Never lose your boldness or your soft, caring side, and please try to reduce the aggression small. 😭😂 We love you, but we also want to survive this friendship!","I’m wishing you the happiest 20th birthday, my love! 🥹💕 May this new decade be kinder, sweeter, and more beautiful than you could ever imagine. You deserve all the good things life has to offer, and I hope this year gives you countless reasons to smile, laugh, and be thankful. I’m rooting for you always, and I pray that this new age brings you closer to everything you’ve ever dreamed of. Keep being the amazing person you are, Lois. I love you, girl, and I’m wishing you nothing but the absolute best today and always. Happy birthday once again, my babe! 🎂💋❤️","With love,"],f:"Layo 💗🎀"},
+{p:["Happy birthday, Loisyyyyy!","BIG 20!!! 🎉","I just want you to know how loved and cherished you are, baby. I’ve never regretted us becoming friends. Thank you for being such an amazing, considerate, and caring person. I love you and appreciate you so much! ❤️🫶🏽"],f:"Love, Kara 💞"}
+];
+let i=-1;
+const $=id=>document.getElementById(id);
+function show(n){
+  i=Math.max(0,Math.min(W.length-1,n));
+  const w=W[i];
+  $('count').textContent='Wish '+(i+1)+' of '+W.length+' 💗';
+  $('body').innerHTML=w.p.map(t=>'<p>'+t+'</p>').join('')+'<div class="from">'+w.f+'</div>';
+  $('body').scrollTop=0;
+  $('body').style.animation='none';$('body').offsetWidth;$('body').style.animation='';
+  $('prev').disabled=i===0;$('next').disabled=i===W.length-1;
+  [...$('dots').children].forEach((d,k)=>d.classList.toggle('on',k===i));
+}
+W.forEach(()=>$('dots').appendChild(document.createElement('i')));
+$('open').onclick=()=>{$('intro').style.display='none';$('wishes').classList.add('on');show(0);burst()};
+$('prev').onclick=()=>show(i-1);
+$('next').onclick=()=>show(i+1);
+document.addEventListener('keydown',e=>{if(i<0)return;if(e.key==='ArrowRight')show(i+1);if(e.key==='ArrowLeft')show(i-1)});
+
+/* floating hearts */
+const hs=['💗','💖','💕','🩷','💝'];
+for(let k=0;k<22;k++){const h=document.createElement('span');h.className='heart';h.textContent=hs[k%hs.length];
+h.style.left=Math.random()*100+'vw';h.style.fontSize=(16+Math.random()*30)+'px';
+h.style.animationDuration=(9+Math.random()*10)+'s';h.style.animationDelay=(-Math.random()*18)+'s';document.body.appendChild(h)}
+
+/* confetti */
+const c=$('confetti'),x=c.getContext('2d');
+const cols=['#ff4f93','#ffffff','#ffb3d1','#ffd700','#ff85b3','#fff0f6'];
+let P=[];
+function size(){c.width=innerWidth;c.height=innerHeight}size();addEventListener('resize',size);
+function piece(y){return{x:Math.random()*c.width,y:y??Math.random()*c.height,w:6+Math.random()*8,h:4+Math.random()*7,r:Math.random()*6,vr:(Math.random()-.5)*.2,vy:.8+Math.random()*1.8,vx:(Math.random()-.5)*.8,col:cols[Math.random()*cols.length|0]}}
+for(let k=0;k<110;k++)P.push(piece());
+function burst(){for(let k=0;k<80;k++)P.push(piece(-20));}
+(function loop(){x.clearRect(0,0,c.width,c.height);
+P.forEach(p=>{p.y+=p.vy;p.x+=p.vx+Math.sin(p.y/40)*.5;p.r+=p.vr;
+if(p.y>c.height+20){p.y=-20;p.x=Math.random()*c.width}
+x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.col;x.globalAlpha=.85;x.fillRect(-p.w/2,-p.h/2,p.w,p.h);x.restore()});
+if(P.length>220)P.splice(0,P.length-220);
+requestAnimationFrame(loop)})();
+</script>
+</body>
+</html>
